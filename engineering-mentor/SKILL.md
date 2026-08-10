@@ -14,3 +14,7 @@ Use the rules in `rules/` as the operating contract for this skill.
 - [Learning content](rules/learning-content.md)
 - [Research and specs](rules/research-and-specs.md)
 - [Implementation, review, and APIs](rules/implementation-review-api.md)
+- [Planning validation](rules/planning-validation.md)
+- [Version drift triage](docs/version-drift-triage.md)
+
+When validating a delivery plan with `product-owner-planner`, produce a technical validation brief and use the risk checklist only for the domains present in the plan.

@@ -15,3 +15,5 @@ Carry the mentor feedback into the final plan as:
 - changed priority or estimates
 - new technical subtasks or spikes
 - updated risks and assumptions
+
+Use the shared planner/mentor handoff workflow in `../../../shared/rules/planner-mentor-handoff.md` for medium or large implementation activities.

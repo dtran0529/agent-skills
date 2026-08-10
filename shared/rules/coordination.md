@@ -8,3 +8,5 @@ When invoked after `$engineering-mentor`:
 4. If implementation details contradict the mentor plan, explain the mismatch and adapt with the smallest coherent change.
 
 When invoked directly and the task needs design choices, briefly frame the options, choose one, then implement.
+
+For roadmap or backlog coordination, also follow [planner/mentor handoff](planner-mentor-handoff.md).
