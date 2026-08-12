@@ -1,6 +1,6 @@
 ---
 name: backend-java-developer
-description: Senior/staff Java backend implementation skill. Use when the user asks Codex to implement backend Java features, refactors, bug fixes, APIs, libraries, Spring Boot services, Java modern code, Maven or Gradle build setup, Gradle Groovy/Kotlin DSL, multi-module projects, buildSrc/build-logic convention plugins, dependency management, build cache/performance, persistence/integration layers, tests, or to turn an engineering-mentor design into production-quality Java code. Coordinate with engineering-mentor by implementing the chosen design after mentor analysis.
+description: Senior/staff Java backend implementation skill. Use when the user asks the agent to implement backend Java features, refactors, bug fixes, APIs, libraries, Spring Boot services, Java modern code, Maven or Gradle build setup, Gradle Groovy/Kotlin DSL, multi-module projects, buildSrc/build-logic convention plugins, dependency management, build cache/performance, persistence/integration layers, tests, or to turn an engineering-mentor design into production-quality Java code. Coordinate with engineering-mentor by implementing the chosen design after mentor analysis.
 ---
 
 # Backend Java Developer

@@ -1,6 +1,6 @@
 ---
 name: frontend-developer
-description: Senior/staff frontend implementation skill. Use when the user asks Codex to implement frontend features, UI refactors, React, Angular, Vue, Next.js, Nuxt, Vite, JavaScript, TypeScript, CSS, SCSS, Sass, Tailwind CSS, Material UI, Ant Design, component libraries, frontend build configuration, npm/pnpm/yarn workspaces, Nx, Turborepo, monorepo frontend setup, state management, routing, forms, accessibility, performance, v0-like local app/page generation, or to turn an engineering-mentor design into production-quality frontend code.
+description: Senior/staff frontend implementation skill. Use when the user asks the agent to implement frontend features, UI refactors, React, Angular, Vue, Next.js, Nuxt, Vite, JavaScript, TypeScript, CSS, SCSS, Sass, Tailwind CSS, Material UI, Ant Design, component libraries, frontend build configuration, npm/pnpm/yarn workspaces, Nx, Turborepo, monorepo frontend setup, state management, routing, forms, accessibility, performance, v0-like local app/page generation, or to turn an engineering-mentor design into production-quality frontend code.
 ---
 
 # Frontend Developer

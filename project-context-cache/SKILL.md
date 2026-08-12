@@ -1,6 +1,6 @@
 ---
 name: project-context-cache
-description: Reusable project context memory for any code repository. Use when Codex is working in a repo and needs to avoid repeatedly rediscovering project structure, build tools, conventions, entry points, test commands, architecture notes, or when the user asks to remember, refresh, cache, onboard, or reuse project context across future feature, refactor, review, or debugging tasks. Supports explicit invocation like "Use $project-context-cache <path-project> <language-or-stack>".
+description: Reusable project context memory for any code repository. Use when the agent is working in a repo and needs to avoid repeatedly rediscovering project structure, build tools, conventions, entry points, test commands, architecture notes, or when the user asks to remember, refresh, cache, onboard, or reuse project context across future feature, refactor, review, or debugging tasks. Supports explicit invocation like "Use project-context-cache <path-project> <language-or-stack>" (Codex: $project-context-cache, Claude: /project-context-cache).
 ---
 
 # Project Context Cache

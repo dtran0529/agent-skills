@@ -108,10 +108,24 @@ agent-skills/
 
 ## Setup Skills
 
-- Chạy `./scripts/setup_codex_skills.sh` trên macOS/Linux hoặc `.\scripts\setup_codex_skills.ps1` trên Windows để sync symlink các skill top-level vào `$CODEX_HOME/skills` hoặc `~/.codex/skills`.
-- Nếu muốn dọn symlink stale sau khi xóa/đổi tên skill, thêm `--prune` trên bash hoặc `-Prune` trên PowerShell.
-- Nếu muốn sync toàn bộ một lượt, thêm `--refresh` trên bash hoặc `-Refresh` trên PowerShell.
-- Nếu muốn chỉ định target, dùng `--target` trên bash hoặc `-Target` trên PowerShell.
+Bộ skill dùng được trên **cả Codex (OpenAI) lẫn Claude**. Format chung là `SKILL.md` + frontmatter (`name`, `description`) mà cả hai đều đọc; file `agents/openai.yaml` chỉ Codex dùng, Claude tự bỏ qua nên không cần xóa.
+
+- Chạy `./scripts/setup_skills.sh` trên macOS/Linux hoặc `.\scripts\setup_skills.ps1` trên Windows để sync symlink các skill top-level vào skills directory của agent.
+- Mặc định cài cho **cả hai** agent: Codex (`$CODEX_HOME/skills` hoặc `~/.codex/skills`) và Claude (`~/.claude/skills`).
+- Chọn agent cụ thể: `--agent codex|claude|both` trên bash, `-Agent codex|claude|both` trên PowerShell.
+- Dọn symlink stale sau khi xóa/đổi tên skill: `--prune` (bash) / `-Prune` (PowerShell).
+- Sync toàn bộ một lượt (force + prune): `--refresh` (bash) / `-Refresh` (PowerShell).
+- Chỉ định target thủ công: `--target DIR` (bash) / `-Target DIR` (PowerShell).
+
+Ví dụ:
+
+```bash
+./scripts/setup_skills.sh                    # cài cho cả Codex và Claude
+./scripts/setup_skills.sh --agent claude     # chỉ Claude (~/.claude/skills)
+./scripts/setup_skills.sh --agent codex --refresh
+```
+
+> Lưu ý: script symlink từng thư mục skill trỏ về path thật trong repo, nên các link tương đối `../docs` và `../shared` bên trong skill vẫn resolve đúng — không được copy tách rời từng thư mục ra khỏi repo.
 
 ## Skill map
 

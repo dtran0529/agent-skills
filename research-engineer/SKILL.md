@@ -1,6 +1,6 @@
 ---
 name: research-engineer
-description: Research skill for engineering decisions. Use when the user asks Codex to research RFCs, specifications, official framework/library docs, best practices, Stack Overflow issues, well-known engineering blogs, common errors, classic pitfalls, migration guides, performance/security guidance, or technology trade-offs before engineering-mentor or developer skills decide how to design or implement.
+description: Research skill for engineering decisions. Use when the user asks the agent to research RFCs, specifications, official framework/library docs, best practices, Stack Overflow issues, well-known engineering blogs, common errors, classic pitfalls, migration guides, performance/security guidance, or technology trade-offs before engineering-mentor or developer skills decide how to design or implement.
 ---
 
 # Research Engineer

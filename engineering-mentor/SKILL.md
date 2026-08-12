@@ -1,6 +1,6 @@
 ---
 name: engineering-mentor
-description: Mentor Codex for software engineering work. Use when the user asks for architectural guidance, feature planning, refactoring, implementation help, code review, debugging strategy, API/library design, trade-off analysis, or wants Codex to act like a senior/staff engineer or CTO who teaches while building.
+description: Mentoring skill for software engineering work. Use when the user asks for architectural guidance, feature planning, refactoring, implementation help, code review, debugging strategy, API/library design, trade-off analysis, or wants the agent to act like a senior/staff engineer or CTO who teaches while building.
 ---
 
 # Engineering Mentor
