@@ -1,0 +1,7 @@
+interface:
+  display_name: "Step Builder"
+  short_description: "Execute one plan step, verify, review, and write a learning report"
+  default_prompt: "Use $step-builder next to execute the next runnable step in shopnow/PLAN.md: verify it with real commands, review it with references/review-checklist.md, write the Vietnamese step report, update PROGRESS.md, and run java scripts/CheckStep.java <root> <id>."
+
+policy:
+  allow_implicit_invocation: true

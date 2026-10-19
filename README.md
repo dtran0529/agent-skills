@@ -204,6 +204,31 @@ Dùng khi cần:
 
 - context ngắn gọn, operational, dùng để khởi động task nhanh hơn
 
+### step-builder
+
+Dùng khi cần:
+
+- thực hiện lần lượt từng step trong một `PLAN.md` có đánh số (`## STEP x.y`, mục Phụ thuộc) + `PROGRESS.md`
+- mỗi step: gate phụ thuộc → implement → kiểm chứng bằng lệnh thật → review → báo cáo học tập → cập nhật tiến độ → tự kiểm tra
+
+Đầu ra kỳ vọng:
+
+- code chạy được cho đúng 1 step, có bằng chứng kiểm chứng
+- báo cáo `docs/steps/STEP-<id>-*.md` (đã làm gì, code then chốt, kiến thức trọng tâm, trade-off, câu hỏi phỏng vấn)
+- `PROGRESS.md`, `docs/problems.md`, `docs/interview-qa.md` được cập nhật
+- `scripts/CheckStep.java` (Java single-file, không cần build) xác nhận báo cáo & tiến độ hợp lệ
+
+Tài nguyên: `references/review-checklist.md` (dùng chung với subagent `step-reviewer` nếu có), `templates/step-report.md`.
+
+```text
+/step-builder status
+/step-builder next
+/step-builder 4.6
+/step-builder report 4.6
+```
+
+> Lưu ý Windows: khi link skill bằng junction, đường dẫn `<skills-dir>/<skill>/../docs` được chuẩn hóa thành `<skills-dir>/docs`. Cần link thêm `docs` và `shared` vào cùng skills directory để các link tương đối resolve đúng.
+
 ## Luồng phối hợp đề xuất
 
 ### 1) Discovery-first (khuyến nghị)
