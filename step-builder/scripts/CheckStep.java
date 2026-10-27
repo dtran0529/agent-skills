@@ -20,7 +20,7 @@ import java.util.regex.Pattern;
  *
  * <ul>
  *   <li>report docs/steps/STEP-&lt;id&gt;-*.md exists, has all 12 numbered sections, no template placeholders left,
- *       at least 3 interview questions
+ *       at least 3 interview questions, every diagram in section 4 followed by a numbered "Giải thích"
  *   <li>PROGRESS.md row has status ✅ or 🟡, a date when ✅, and a link to the report
  *   <li>docs/interview-qa.md mentions the step
  * </ul>
@@ -115,11 +115,35 @@ public class CheckStep {
             }
         }
 
+        checkFlowExplained(name, text, errors);
+
         Matcher qa = Pattern.compile("(?ms)^## 10\\..*?(?=^## 11\\.|\\z)").matcher(text);
         if (qa.find()) {
             long questions = Pattern.compile("\\*\\*Hỏi:\\*\\*").matcher(qa.group()).results().count();
             if (questions < 3) {
                 errors.add(name + ": mục 10 cần ít nhất 3 câu hỏi phỏng vấn (đang có " + questions + ")");
+            }
+        }
+    }
+
+    /**
+     * Section 4: every diagram (a fenced block) must be followed, before the next block or the end of the section, by
+     * a "**Giải thích:**" line and a numbered list walking through it.
+     */
+    private static void checkFlowExplained(String name, String text, List<String> errors) {
+        Matcher flow = Pattern.compile("(?ms)^## 4\\..*?(?=^## 5\\.|\\z)").matcher(text);
+        if (!flow.find()) {
+            return;
+        }
+        String[] parts = flow.group().split("(?m)^```", -1);
+        // parts: [prose, block1, prose after block1, block2, prose after block2, ...]
+        for (int i = 1; i + 1 < parts.length; i += 2) {
+            String after = parts[i + 1];
+            boolean explained = after.contains("**Giải thích:**") && Pattern.compile("(?m)^\\d+\\. ").matcher(after).find();
+            if (!explained) {
+                String firstLine = parts[i].lines().findFirst().orElse("").strip();
+                errors.add(name + ": mục 4, sơ đồ thứ " + ((i + 1) / 2) + " (```" + firstLine
+                        + ") thiếu phần '**Giải thích:**' đánh số ngay bên dưới");
             }
         }
     }

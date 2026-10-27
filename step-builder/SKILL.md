@@ -64,6 +64,7 @@ Paths below such as `../docs/...` are relative to this skill's folder inside the
 - Path: `<root>/docs/steps/STEP-<id>-<kebab-slug>.md`, from [templates/step-report.md](templates/step-report.md).
 - Follow [learning content rules](../engineering-mentor/rules/learning-content.md): natural Vietnamese with diacritics; explain *why*; show only decisive code lines with real file links; numbers and outputs must be real.
 - Depth proportional to the step: keep every heading; write "Không áp dụng" for a section that genuinely does not apply. ⭐ steps (Phase 4, 5, 7) get the deepest sections 6, 7, 10.
+- Section 4: every diagram (mermaid or ASCII block) is followed by a `**Giải thích:**` numbered list that walks the diagram in order. Each item names the step as it appears on the diagram, links the class/config that does it, says what happens and why, and covers the failure branch (what the caller gets, or what breaks if the step were skipped). A diagram without this walk-through is incomplete; `CheckStep.java` rejects it.
 - 4–6 interview questions, answered with reference to this project's code.
 
 ### 9. Update tracking

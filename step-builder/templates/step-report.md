@@ -17,6 +17,16 @@ Bài toán thực tế mà step này giải quyết và kết quả nhìn thấy
 ## 4. Luồng hoạt động
 Sơ đồ mermaid (sequence/flowchart) hoặc ASCII: request/dữ liệu đi qua các thành phần thế nào.
 
+```mermaid
+sequenceDiagram
+    participant C as Client
+```
+
+**Giải thích:** bắt buộc ngay dưới **mỗi** sơ đồ, đánh số theo đúng thứ tự trên sơ đồ.
+
+1. **<Tên bước trên sơ đồ>** ([`File.java`](../../backend/...)): chuyện gì xảy ra; vì sao làm vậy; nhánh lỗi thì trả về gì / điều gì xảy ra nếu bỏ bước này.
+2. ...
+
 ## 5. Code then chốt
 Chỉ những dòng mang tính quyết định, mỗi đoạn kèm **vì sao viết như vậy** và điều gì xảy ra nếu viết khác.
 

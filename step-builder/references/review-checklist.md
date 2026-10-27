@@ -32,6 +32,7 @@ Use after implementing a step and before writing its report. Severity:
 
 ## 5. Report accuracy
 - [ ] Every file path in the report exists; snippets match the current code.
+- [ ] Every diagram in section 4 has a numbered `**Giải thích:**` walk-through in the diagram's order, and each item matches what the code really does (including error branches).
 - [ ] Numbers in report and docs/problems.md come from real runs (with conditions: thread count, data size).
 - [ ] Interview answers are correct and tied to this project's code.
 - [ ] PROGRESS.md, docs/interview-qa.md updated; ADR added if a durable decision was made.
